@@ -1,0 +1,44 @@
+let g:spf13_bundle_groups=['general', 'neocomplete', 'programming', 'ruby', 'python', 'go', 'javascript', 'html', 'misc', 'writing' ]
+let g:airline_powerline_fonts=1
+
+" add gotags for tabbar plugin, need to install ctags first : brew install ctags
+" then go get -u github.com/jstemmer/gotags
+" check gotags under $GOPATH/bin, and add $GOPATH/bin to $PATH
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+" add key binding for vim-go
+au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
+au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
+au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
+au Filetype go nnoremap <leader>r :GoRun %<CR>
+au Filetype go nnoremap <Leader>b :GoBuild <CR>:exe "GoBuild" <CR>
+au Filetype go nnoremap <Leader>e :GoErrCheck <CR>:exe "GoErrCheck" <CR>
+au Filetype go nnoremap <Leader>d :GoDoc <CR>:exe "GoDoc" <CR>
+
+
