@@ -38,7 +38,13 @@ au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>r :GoRun %<CR>
 au Filetype go nnoremap <Leader>b :GoBuild <CR>:exe "GoBuild" <CR>
-au Filetype go nnoremap <Leader>e :GoErrCheck <CR>:exe "GoErrCheck" <CR>
+" au Filetype go nnoremap <Leader>e :GoErrCheck <CR>:exe "GoErrCheck" <CR>
 au Filetype go nnoremap <Leader>d :GoDoc <CR>:exe "GoDoc" <CR>
 
+" add some special character input 
+imap >> →
+imap << ←
+imap ^^ ↑
+imap VV ↓
+imap aa λ
 
