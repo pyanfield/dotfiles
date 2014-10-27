@@ -1,0 +1,12 @@
+" set GUI fonts
+" set guifont=Andale\ Mono\ Regular:h14,Menlo\ Regular:h13,Consolas\ Regular:h14,Courier\ New\ Regular:h15
+
+
+" set spell check on and off
+setlocal nospell
+" autocmd InsertEnter * setlocal spell
+" autocmd InsertLeave * setlocal nospell
+
+" set nolist
+set listchars=tab:\¦\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace   ¦ ░ ▒  ┋ ᠆ ┆ •
+" hi! link SpecialKey Normal
